@@ -99,6 +99,10 @@
 		2C8CCF9B284675DE003BC2A4 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				2C8CCFCF28467661003BC2A4 /* Extensions */,
+				2C8CCFCE28467653003BC2A4 /* Common */,
+				2C8CCFCD2846764C003BC2A4 /* Networking */,
+				2C8CCFCC2846763F003BC2A4 /* Features */,
 				2C8CCF9C284675DE003BC2A4 /* AppDelegate.swift */,
 				2C8CCF9E284675DE003BC2A4 /* SceneDelegate.swift */,
 				2C8CCFA0284675DE003BC2A4 /* ViewController.swift */,
@@ -125,6 +129,34 @@
 				2C8CCFBF284675E0003BC2A4 /* MoviesUITestsLaunchTests.swift */,
 			);
 			path = MoviesUITests;
+			sourceTree = "<group>";
+		};
+		2C8CCFCC2846763F003BC2A4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		2C8CCFCD2846764C003BC2A4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2C8CCFCE28467653003BC2A4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2C8CCFCF28467661003BC2A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
