@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C8CCF9D284675DE003BC2A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCF9C284675DE003BC2A4 /* AppDelegate.swift */; };
 		2C8CCF9F284675DE003BC2A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCF9E284675DE003BC2A4 /* SceneDelegate.swift */; };
-		2C8CCFA1284675DE003BC2A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFA0284675DE003BC2A4 /* ViewController.swift */; };
+		2C8CCFA1284675DE003BC2A4 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFA0284675DE003BC2A4 /* MovieListViewController.swift */; };
 		2C8CCFA4284675DE003BC2A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8CCFA2284675DE003BC2A4 /* Main.storyboard */; };
 		2C8CCFA6284675DF003BC2A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8CCFA5284675DF003BC2A4 /* Assets.xcassets */; };
 		2C8CCFA9284675DF003BC2A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8CCFA7284675DF003BC2A4 /* LaunchScreen.storyboard */; };
@@ -25,6 +25,8 @@
 		2C8CCFDE284681C4003BC2A4 /* MovieListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFDD284681C4003BC2A4 /* MovieListService.swift */; };
 		2C8CCFE0284689A1003BC2A4 /* MovieListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFDF284689A1003BC2A4 /* MovieListResponseModel.swift */; };
 		2C8CCFE2284689D6003BC2A4 /* MovieListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFE1284689D6003BC2A4 /* MovieListRequest.swift */; };
+		2C8CCFE528468D92003BC2A4 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFE428468D92003BC2A4 /* MovieListViewModel.swift */; };
+		2C8CCFE728468E75003BC2A4 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFE628468E75003BC2A4 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,7 @@
 		2C8CCF99284675DE003BC2A4 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8CCF9C284675DE003BC2A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C8CCF9E284675DE003BC2A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C8CCFA0284675DE003BC2A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C8CCFA0284675DE003BC2A4 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		2C8CCFA3284675DE003BC2A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C8CCFA5284675DF003BC2A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C8CCFA8284675DF003BC2A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +69,8 @@
 		2C8CCFDD284681C4003BC2A4 /* MovieListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListService.swift; sourceTree = "<group>"; };
 		2C8CCFDF284689A1003BC2A4 /* MovieListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListResponseModel.swift; sourceTree = "<group>"; };
 		2C8CCFE1284689D6003BC2A4 /* MovieListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRequest.swift; sourceTree = "<group>"; };
+		2C8CCFE428468D92003BC2A4 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		2C8CCFE628468E75003BC2A4 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +127,6 @@
 				2C8CCFCC2846763F003BC2A4 /* Features */,
 				2C8CCF9C284675DE003BC2A4 /* AppDelegate.swift */,
 				2C8CCF9E284675DE003BC2A4 /* SceneDelegate.swift */,
-				2C8CCFA0284675DE003BC2A4 /* ViewController.swift */,
 				2C8CCFA2284675DE003BC2A4 /* Main.storyboard */,
 				2C8CCFA5284675DF003BC2A4 /* Assets.xcassets */,
 				2C8CCFA7284675DF003BC2A4 /* LaunchScreen.storyboard */,
@@ -180,6 +183,7 @@
 		2C8CCFCF28467661003BC2A4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2C8CCFE628468E75003BC2A4 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -187,7 +191,9 @@
 		2C8CCFDC284681A2003BC2A4 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
+				2C8CCFA0284675DE003BC2A4 /* MovieListViewController.swift */,
 				2C8CCFE3284689DC003BC2A4 /* Service */,
+				2C8CCFE428468D92003BC2A4 /* MovieListViewModel.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -337,12 +343,14 @@
 				2C8CCFD72846790B003BC2A4 /* NetworkingProtocols.swift in Sources */,
 				2C8CCFDE284681C4003BC2A4 /* MovieListService.swift in Sources */,
 				2C8CCFD3284678F1003BC2A4 /* APIEndPoint.swift in Sources */,
-				2C8CCFA1284675DE003BC2A4 /* ViewController.swift in Sources */,
+				2C8CCFA1284675DE003BC2A4 /* MovieListViewController.swift in Sources */,
+				2C8CCFE528468D92003BC2A4 /* MovieListViewModel.swift in Sources */,
 				2C8CCF9D284675DE003BC2A4 /* AppDelegate.swift in Sources */,
 				2C8CCFE2284689D6003BC2A4 /* MovieListRequest.swift in Sources */,
 				2C8CCF9F284675DE003BC2A4 /* SceneDelegate.swift in Sources */,
 				2C8CCFD5284678FE003BC2A4 /* APIError.swift in Sources */,
 				2C8CCFE0284689A1003BC2A4 /* MovieListResponseModel.swift in Sources */,
+				2C8CCFE728468E75003BC2A4 /* UIColor+Extensions.swift in Sources */,
 				2C8CCFD928467917003BC2A4 /* JSONKeySnakeCaseDecoder.swift in Sources */,
 				2C8CCFDB28467C91003BC2A4 /* Constants.swift in Sources */,
 			);

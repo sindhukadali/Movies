@@ -13,10 +13,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        let window = UIWindow(windowScene: windowScene)
+
+        let networkManager: NetworkManagerProtocol = NetworkManager()
+        let service: MovieListServiceProtocol = MovieListService(networkManager: networkManager)
+
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let movingListingVC = sb.instantiateViewController(withIdentifier: "MovieListViewController") as! MovieListViewController
+
+        movingListingVC.viewModel = MovieListViewModel(service: service, delegate: movingListingVC)
+        let navController = UINavigationController(rootViewController: movingListingVC)
+
+        if #available(iOS 15, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            appearance.backgroundColor = .appColor
+            let navAppearance = UINavigationBar.appearance()
+            navAppearance.tintColor = .white
+            navAppearance.standardAppearance = appearance
+            navAppearance.scrollEdgeAppearance = appearance
+        } else {
+            navController.navigationBar.tintColor = .white
+            navController.navigationBar.barTintColor = .appColor
+            navController.navigationBar.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: UIColor.white
+            ]
+        }
+        window.rootViewController = navController
+        self.window = window
+        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
