@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="slW-w3-3k0">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search by movie name" translatesAutoresizingMaskIntoConstraints="NO" id="ac5-uK-K8E">
                                 <rect key="frame" x="16" y="56" width="382" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -30,14 +33,17 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lKt-tj-O0R" secondAttribute="trailing" id="1eY-hd-0Ke"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lKt-tj-O0R" secondAttribute="bottom" id="JT2-lP-jeM"/>
+                            <constraint firstItem="slW-w3-3k0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NK6-cl-eaS"/>
                             <constraint firstItem="lKt-tj-O0R" firstAttribute="top" secondItem="ac5-uK-K8E" secondAttribute="bottom" id="Pbw-KR-npS"/>
                             <constraint firstItem="lKt-tj-O0R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WdS-fM-6My"/>
                             <constraint firstItem="ac5-uK-K8E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="htv-JJ-gmX"/>
                             <constraint firstAttribute="trailing" secondItem="ac5-uK-K8E" secondAttribute="trailing" constant="16" id="oom-G1-9qc"/>
                             <constraint firstItem="ac5-uK-K8E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wx7-MO-rdm"/>
+                            <constraint firstItem="slW-w3-3k0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yGy-98-YUH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loader" destination="slW-w3-3k0" id="UUK-D3-tGP"/>
                         <outlet property="searchBar" destination="ac5-uK-K8E" id="Ihp-tI-pV8"/>
                         <outlet property="tableView" destination="lKt-tj-O0R" id="8gM-rD-3Q9"/>
                     </connections>

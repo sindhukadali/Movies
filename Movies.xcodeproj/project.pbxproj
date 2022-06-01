@@ -27,6 +27,7 @@
 		2C8CCFE2284689D6003BC2A4 /* MovieListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFE1284689D6003BC2A4 /* MovieListRequest.swift */; };
 		2C8CCFE528468D92003BC2A4 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFE428468D92003BC2A4 /* MovieListViewModel.swift */; };
 		2C8CCFE728468E75003BC2A4 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFE628468E75003BC2A4 /* UIColor+Extensions.swift */; };
+		2C8CCFE928475BB7003BC2A4 /* MovieListCellViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFE828475BB7003BC2A4 /* MovieListCellViewModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		2C8CCFE1284689D6003BC2A4 /* MovieListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRequest.swift; sourceTree = "<group>"; };
 		2C8CCFE428468D92003BC2A4 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 		2C8CCFE628468E75003BC2A4 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		2C8CCFE828475BB7003BC2A4 /* MovieListCellViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCellViewModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 				2C8CCFA0284675DE003BC2A4 /* MovieListViewController.swift */,
 				2C8CCFE3284689DC003BC2A4 /* Service */,
 				2C8CCFE428468D92003BC2A4 /* MovieListViewModel.swift */,
+				2C8CCFE828475BB7003BC2A4 /* MovieListCellViewModels.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				2C8CCFE0284689A1003BC2A4 /* MovieListResponseModel.swift in Sources */,
 				2C8CCFE728468E75003BC2A4 /* UIColor+Extensions.swift in Sources */,
 				2C8CCFD928467917003BC2A4 /* JSONKeySnakeCaseDecoder.swift in Sources */,
+				2C8CCFE928475BB7003BC2A4 /* MovieListCellViewModels.swift in Sources */,
 				2C8CCFDB28467C91003BC2A4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

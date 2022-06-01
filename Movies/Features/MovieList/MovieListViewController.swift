@@ -11,6 +11,7 @@ class MovieListViewController: UIViewController {
 
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var loader: UIActivityIndicatorView!
 
     var viewModel: MovieListViewModelProtocol?
 
@@ -21,5 +22,28 @@ class MovieListViewController: UIViewController {
 }
 
 extension MovieListViewController: MovieListViewModelDelegate {
-    
+    func showLoader() {
+
+    }
+
+    func hideLoader() {
+
+    }
+
+    func hideTableView() {
+
+    }
+
+    func showTableView() {
+
+    }
+
+    func reloadTable() {
+
+    }
+
+    func showError(title: String, msg: String) {
+
+    }
+
 }
