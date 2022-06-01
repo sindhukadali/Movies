@@ -42,6 +42,9 @@ class MovieListViewController: UIViewController {
         tableView.contentInset.top = 12
         tableView.register(UINib(nibName: "MovieDetailsTVC", bundle: .main), forCellReuseIdentifier: MovieDetailsTVC.reuseIdentifier)
         hideTableView()
+        let noResultView = EmptyStateView()
+        noResultView.configureView(state: .emptyList)
+        tableView.backgroundView = noResultView
     }
 
     private func getMovieList(searchString: String, pageNo: Int) {
@@ -65,7 +68,7 @@ extension MovieListViewController: MovieListViewModelDelegate {
 
     func hideTableView() {
         DispatchQueue.main.async {
-            self.tableView.isHidden = true
+             self.tableView.isHidden = true
         }
     }
 
@@ -93,7 +96,15 @@ extension MovieListViewController: MovieListViewModelDelegate {
 extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.numberOfRows(in: section) ?? 0
+        let numOfRows = viewModel?.numberOfRows(in: section) ?? 0
+        if numOfRows > 0 {
+            tableView.backgroundView?.isHidden = true
+            tableView.separatorStyle = .singleLine
+        } else {
+            tableView.backgroundView?.isHidden = false
+            tableView.separatorStyle = .none
+        }
+        return numOfRows
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

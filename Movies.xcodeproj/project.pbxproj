@@ -36,6 +36,8 @@
 		2C8CCFF72847670E003BC2A4 /* MovieDetailsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFF62847670E003BC2A4 /* MovieDetailsResponseModel.swift */; };
 		2C8CCFF928476773003BC2A4 /* MovieDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFF828476773003BC2A4 /* MovieDetailRequest.swift */; };
 		2C8CCFFB28476781003BC2A4 /* MovieDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFFA28476781003BC2A4 /* MovieDetailService.swift */; };
+		2C8CCFFD2847A170003BC2A4 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFFC2847A170003BC2A4 /* EmptyStateView.swift */; };
+		2C8CCFFF2847A1DB003BC2A4 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CCFFE2847A1DB003BC2A4 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		2C8CCFF62847670E003BC2A4 /* MovieDetailsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsResponseModel.swift; sourceTree = "<group>"; };
 		2C8CCFF828476773003BC2A4 /* MovieDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRequest.swift; sourceTree = "<group>"; };
 		2C8CCFFA28476781003BC2A4 /* MovieDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailService.swift; sourceTree = "<group>"; };
+		2C8CCFFC2847A170003BC2A4 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		2C8CCFFE2847A1DB003BC2A4 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				2C8CCFDA28467C91003BC2A4 /* Constants.swift */,
+				2C8CCFFC2847A170003BC2A4 /* EmptyStateView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 			children = (
 				2C8CCFE628468E75003BC2A4 /* UIColor+Extensions.swift */,
 				2C8CCFEE28476088003BC2A4 /* UIAlertController+Extensions.swift */,
+				2C8CCFFE2847A1DB003BC2A4 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -385,9 +391,11 @@
 			files = (
 				2C8CCFF72847670E003BC2A4 /* MovieDetailsResponseModel.swift in Sources */,
 				2C8CCFEF28476088003BC2A4 /* UIAlertController+Extensions.swift in Sources */,
+				2C8CCFFD2847A170003BC2A4 /* EmptyStateView.swift in Sources */,
 				2C8CCFD12846787B003BC2A4 /* NetworkManager.swift in Sources */,
 				2C8CCFD72846790B003BC2A4 /* NetworkingProtocols.swift in Sources */,
 				2C8CCFDE284681C4003BC2A4 /* MovieListService.swift in Sources */,
+				2C8CCFFF2847A1DB003BC2A4 /* UIView+Extensions.swift in Sources */,
 				2C8CCFEC28475FAE003BC2A4 /* MovieDetailsTVC.swift in Sources */,
 				2C8CCFD3284678F1003BC2A4 /* APIEndPoint.swift in Sources */,
 				2C8CCFA1284675DE003BC2A4 /* MovieListViewController.swift in Sources */,

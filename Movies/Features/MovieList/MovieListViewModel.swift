@@ -80,12 +80,11 @@ final class MovieListViewModel: MovieListViewModelProtocol {
 
 private extension MovieListViewModel {
     func createCellViewModels(from searchedMovieList: [SearchedMovie]?) {
+        moviesCellViewModels.removeAll()
         guard let searchedMovieList = searchedMovieList,
               !searchedMovieList.isEmpty else {
-            self.delegate?.showError(title: "Error", msg: "No movies matching your searched criteria")
             return
         }
-        moviesCellViewModels.removeAll()
         for movie in searchedMovieList {
             let cellVM = MovieCellViewModel(rowType: .movie, imdbId: movie.imdbID, title: movie.title, type: movie.type, year: movie.year, poster: movie.poster)
             moviesCellViewModels.append(cellVM)
