@@ -7,6 +7,7 @@
 
 
 import UIKit
+import SDWebImage
 
 final class MovieDetailsTVC: UITableViewCell {
 
@@ -32,7 +33,7 @@ final class MovieDetailsTVC: UITableViewCell {
 
         if let poster = model.poster,
            let posterUrl = URL(string: poster) {
-           
+            movieImageView.sd_setImage(with: posterUrl, placeholderImage: UIImage(named: "movie_poster_default"), options: .retryFailed)
         }
     }
 }

@@ -49,7 +49,6 @@ class MovieListViewController: UIViewController {
 
     private func getMovieList(searchString: String, pageNo: Int) {
         viewModel?.fetchMoviesList(page: pageNo, searchedString: searchString)
-
     }
 }
 
