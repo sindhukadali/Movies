@@ -18,7 +18,6 @@ class MovieListViewController: UIViewController {
         return loader
     }()
 
-
     var viewModel: MovieListViewModelProtocol?
 
     override func viewDidLoad() {
@@ -113,7 +112,13 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let controller = sb.instantiateViewController(withIdentifier: "MovieDetailViewController") as! MovieDetailViewController
+        let networkManager: NetworkManagerProtocol = NetworkManager()
+        let service: MovieDetailServiceProtocol = MovieDetailService(networkManager: networkManager)
 
+        controller.viewModel = MoviewDetailViewModel(service: service, imdbID: viewModel?.getImdbId(at: indexPath.row) ?? "", delegate: controller)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 
