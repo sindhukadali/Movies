@@ -47,6 +47,9 @@
 		2C8CD0132847C976003BC2A4 /* MovieDetailServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CD0122847C976003BC2A4 /* MovieDetailServiceTests.swift */; };
 		2C8CD0162847CB1E003BC2A4 /* MovieDetailInValidResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C8CD0142847CB1E003BC2A4 /* MovieDetailInValidResponse.json */; };
 		2C8CD0172847CB1E003BC2A4 /* MovieDetailValidResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C8CD0152847CB1E003BC2A4 /* MovieDetailValidResponse.json */; };
+		2C8CD0192847CE48003BC2A4 /* MovieListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CD0182847CE48003BC2A4 /* MovieListViewModelTests.swift */; };
+		2C8CD01B2847D3C7003BC2A4 /* MovieListViewModelDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CD01A2847D3C7003BC2A4 /* MovieListViewModelDelegateMock.swift */; };
+		2C8CD01E2847D7B5003BC2A4 /* MovieListServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CD01D2847D7B5003BC2A4 /* MovieListServiceMock.swift */; };
 		8078ED6D9CD4ACC11F583640 /* Pods_Movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A989C09EB24E9D14C1C67842 /* Pods_Movies.framework */; };
 		C2579FF5C74C83908834C88B /* Pods_MoviesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8754A49497C0721A1B2D8CC /* Pods_MoviesTests.framework */; };
 		C951591D1329EC252CD1EA1A /* Pods_Movies_MoviesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBA2324CBBAF0C895FD1B56 /* Pods_Movies_MoviesUITests.framework */; };
@@ -115,6 +118,9 @@
 		2C8CD0122847C976003BC2A4 /* MovieDetailServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailServiceTests.swift; sourceTree = "<group>"; };
 		2C8CD0142847CB1E003BC2A4 /* MovieDetailInValidResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MovieDetailInValidResponse.json; sourceTree = "<group>"; };
 		2C8CD0152847CB1E003BC2A4 /* MovieDetailValidResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MovieDetailValidResponse.json; sourceTree = "<group>"; };
+		2C8CD0182847CE48003BC2A4 /* MovieListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModelTests.swift; sourceTree = "<group>"; };
+		2C8CD01A2847D3C7003BC2A4 /* MovieListViewModelDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModelDelegateMock.swift; sourceTree = "<group>"; };
+		2C8CD01D2847D7B5003BC2A4 /* MovieListServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListServiceMock.swift; sourceTree = "<group>"; };
 		7004AD24922FC8A608DB4EC3 /* Pods-Movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies.release.xcconfig"; path = "Target Support Files/Pods-Movies/Pods-Movies.release.xcconfig"; sourceTree = "<group>"; };
 		A989C09EB24E9D14C1C67842 /* Pods_Movies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBA2324CBBAF0C895FD1B56 /* Pods_Movies_MoviesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movies_MoviesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +227,7 @@
 				2C8CD0052847C72E003BC2A4 /* Mocks */,
 				2C8CD0002847B50B003BC2A4 /* ServiceTests */,
 				2C8CCFB3284675E0003BC2A4 /* MoviesTests.swift */,
+				2C8CD0182847CE48003BC2A4 /* MovieListViewModelTests.swift */,
 			);
 			path = MoviesTests;
 			sourceTree = "<group>";
@@ -330,6 +337,8 @@
 			isa = PBXGroup;
 			children = (
 				2C8CD0062847C73E003BC2A4 /* NetworkManagerMock.swift */,
+				2C8CD01A2847D3C7003BC2A4 /* MovieListViewModelDelegateMock.swift */,
+				2C8CD01D2847D7B5003BC2A4 /* MovieListServiceMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -648,8 +657,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C8CD0042847C6BD003BC2A4 /* MovieListServiceTests.swift in Sources */,
+				2C8CD0192847CE48003BC2A4 /* MovieListViewModelTests.swift in Sources */,
 				2C8CD0022847B5B0003BC2A4 /* MovieListRequestTests.swift in Sources */,
 				2C8CD0112847C967003BC2A4 /* MovieDetailRequestTests.swift in Sources */,
+				2C8CD01B2847D3C7003BC2A4 /* MovieListViewModelDelegateMock.swift in Sources */,
+				2C8CD01E2847D7B5003BC2A4 /* MovieListServiceMock.swift in Sources */,
 				2C8CD0072847C73E003BC2A4 /* NetworkManagerMock.swift in Sources */,
 				2C8CCFB4284675E0003BC2A4 /* MoviesTests.swift in Sources */,
 				2C8CD0132847C976003BC2A4 /* MovieDetailServiceTests.swift in Sources */,

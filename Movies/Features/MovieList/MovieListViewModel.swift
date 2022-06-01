@@ -27,7 +27,7 @@ protocol MovieListViewModelDelegate: AnyObject {
 final class MovieListViewModel: MovieListViewModelProtocol {
     private let service: MovieListServiceProtocol
     private weak var delegate: MovieListViewModelDelegate?
-    private var moviesCellViewModels: [MovieCellVMRepresentable] = []
+    private(set) var moviesCellViewModels: [MovieCellVMRepresentable] = []
 
     init(service: MovieListServiceProtocol, delegate: MovieListViewModelDelegate?) {
         self.service = service
