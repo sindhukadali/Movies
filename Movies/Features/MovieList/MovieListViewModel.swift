@@ -8,6 +8,7 @@
 import Foundation
 
 protocol MovieListViewModelProtocol: AnyObject {
+    var navTitle: String { get }
     func fetchMoviesList(page: Int, searchedString: String)
     func numberOfRows(in section: Int) -> Int
     func getCellViewModel(at index: Int) -> MovieCellVMRepresentable?
@@ -31,6 +32,10 @@ final class MovieListViewModel: MovieListViewModelProtocol {
     init(service: MovieListServiceProtocol, delegate: MovieListViewModelDelegate?) {
         self.service = service
         self.delegate = delegate
+    }
+
+    var navTitle: String {
+        return "Movies"
     }
 
     func fetchMoviesList(page: Int, searchedString: String) {

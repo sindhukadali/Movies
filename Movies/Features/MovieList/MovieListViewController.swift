@@ -11,39 +11,123 @@ class MovieListViewController: UIViewController {
 
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var loader: UIActivityIndicatorView!
+
+    private lazy var loader: UIActivityIndicatorView = {
+        let loader = UIActivityIndicatorView(style: .medium)
+        loader.translatesAutoresizingMaskIntoConstraints = false
+        return loader
+    }()
+
 
     var viewModel: MovieListViewModelProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Movies"
+        title = viewModel?.navTitle
+        setupViews()
+    }
+
+    private func setupViews() {
+        view.addSubview(loader)
+        loader.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        loader.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        configureTableView()
+        searchBar.delegate = self
+    }
+
+    private func configureTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 80
+        tableView.contentInset.top = 12
+        tableView.register(UINib(nibName: "MovieDetailsTVC", bundle: .main), forCellReuseIdentifier: MovieDetailsTVC.reuseIdentifier)
+        hideTableView()
+    }
+
+    private func getMovieList(searchString: String, pageNo: Int) {
+        viewModel?.fetchMoviesList(page: pageNo, searchedString: searchString)
+
     }
 }
 
 extension MovieListViewController: MovieListViewModelDelegate {
     func showLoader() {
-
+        DispatchQueue.main.async {
+            self.loader.startAnimating()
+        }
     }
 
     func hideLoader() {
-
+        DispatchQueue.main.async {
+            self.loader.stopAnimating()
+        }
     }
 
     func hideTableView() {
-
+        DispatchQueue.main.async {
+            self.tableView.isHidden = true
+        }
     }
 
     func showTableView() {
-
+        DispatchQueue.main.async {
+            self.tableView.isHidden = false
+        }
     }
 
     func reloadTable() {
-
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 
     func showError(title: String, msg: String) {
+        DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                UIAlertController.showAlert(from: self, title: "Error", msg: msg)
+            }
+        }
+    }
+}
 
+extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel?.numberOfRows(in: section) ?? 0
     }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cellViewModel = viewModel?.getCellViewModel(at: indexPath.row) else {
+            return UITableViewCell()
+        }
+        switch cellViewModel.rowType {
+        case .movie:
+            if let cellViewModel = cellViewModel as? MovieCellViewModel {
+                let cell = tableView.dequeueReusableCell(withIdentifier: MovieDetailsTVC.reuseIdentifier, for: indexPath) as! MovieDetailsTVC
+                cell.configure(from: cellViewModel)
+                return cell
+            }
+        }
+        return UITableViewCell()
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    }
+}
+
+extension MovieListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text,
+              searchText.count > 3 else {
+            return
+        }
+        getMovieList(searchString: searchText, pageNo: 1)
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewModel?.clearSearchedMovies()
+        tableView.reloadData()
+    }
 }
